@@ -266,8 +266,9 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, index) {
+  array.splice(index, 1);
+  return array.length;
 }
 
 
@@ -308,8 +309,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const lotsoart = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i]['paintings'] >= 100){
+      lotsoart.push(array[i]['name']);
+    }
+  }
+  return lotsoart;
 }
 
 
