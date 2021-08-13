@@ -39,9 +39,11 @@ a variable is a container for data. you fill a variable with data you can use an
 
 4. What is the purpose of using functions in code?
 
-functions are used to perform actions you would like with easier
+functions are used to perform actions in blocks of code that are easier to read and reuse without having to type it's entire contents over again.
 
 5. How do you access a key inside of an object inside of an array?
+
+array[index].key || array[index]['key']
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
