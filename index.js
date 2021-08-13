@@ -247,12 +247,14 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array) {
   const newArray = [];
   for (let i = 0; i < array.length; i++){
-    if(array[i]['years'].includes('')){
-      return 'todo';
+    let str = array[i]['years'].split(' - ');
+    if(str[0] >= 1901 && str[1]<= 2000){
+      newArray.push(array[i]['name']);
     }
   }
+  return newArray;
 }
-
+console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -285,8 +287,16 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array) {
+  array.push({
+    id: 20,
+    name: 'Mark Trepanier,', 
+    years: '1988 - 2021',
+    genre: 'Web Design', 
+    nationality: 'Latino-Icelandic',
+    bio: 'yup'
+  })
+  return array;
 }
 
 
